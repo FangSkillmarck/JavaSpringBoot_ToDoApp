@@ -5,25 +5,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class User {
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String username;
+    private String customername;
     private String password;
 
     @OneToMany
-    private List<Todo> todoList = new ArrayList<>();
+    private List<Book> bookList = new ArrayList<>();
 
-    public User() {
+    public Customer() {
     }
 
-    public User(Long id, String username, String password, List<Todo> todoList) {
+    public Customer(Long id, String customername, String password, List<Book> bookList) {
         this.id = id;
-        this.username = username;
+        this.customername = customername;
         this.password = password;
-        this.todoList = todoList;
+        this.bookList = bookList;
     }
 
     public Long getId() {
@@ -34,12 +34,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getCustomername() {
+        return customername;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setCustomername(String customername) {
+        this.customername = customername;
     }
 
     public String getPassword() {
@@ -50,11 +50,11 @@ public class User {
         this.password = password;
     }
 
-    public List<Todo> getTodoList() {
-        return todoList;
+    public List<Book> getBookList() {
+        return bookList;
     }
 
-    public void setTodoList(List<Todo> todoList) {
-        this.todoList = todoList;
+    public void setBookList(List<Book> bookList) {
+        this.bookList = bookList;
     }
 }

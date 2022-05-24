@@ -12,12 +12,12 @@ import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/users")
-public class UserController {
+public class AuthorController {
 
     private UserRepository userRepository;
     private TodoRepository todoRepository;
 
-    public UserController(UserRepository userRepository, TodoRepository todoRepository) {
+    public AuthorController(UserRepository userRepository, TodoRepository todoRepository) {
         this.userRepository = userRepository;
         this.todoRepository = todoRepository;
     }
